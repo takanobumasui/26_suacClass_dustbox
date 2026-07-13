@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  color: #222;
+  background: #fafafa;
+  margin: 0;
+  padding: 60px 16px;
+}
+
+.bin {
+  position: relative;
+  width: 220px;
+  height: 280px;
+  margin: 0 auto;
+  background: #e8e8e8;
+  border: 6px solid #444;
+  border-radius: 0 0 28px 28px;
+  overflow: hidden;
+}
+
+.bin-lid {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  right: -10px;
+  height: 18px;
+  background: #444;
+  border-radius: 6px;
+}
+
+.fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #8bc34a, #558b2f);
+  transition: height 1s ease;
+}
+
+.percent {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.updated {
+  color: #888;
+  font-size: 0.85em;
+}

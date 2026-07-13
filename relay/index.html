@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>ダストボックス中継ページ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="relay.css" />
+</head>
+<body>
+  <main>
+    <h1>ダストボックス 中継ページ</h1>
+    <p class="note">
+      このページはゴミ箱の横に置いたPCで、Chrome または Edge で開いたままにしてください。<br />
+      Arduinoから届いた距離データを読み取り、Firebaseに送信します。
+    </p>
+
+    <button id="connectBtn">Arduinoに接続</button>
+
+    <section class="calibration">
+      <h2>キャリブレーション</h2>
+      <label>
+        空の時の距離(cm):
+        <input type="number" id="emptyDistance" step="0.1" />
+      </label>
+      <label>
+        満杯の時の距離(cm):
+        <input type="number" id="fullDistance" step="0.1" />
+      </label>
+    </section>
+
+    <section class="status">
+      <h2>現在の値</h2>
+      <p>距離: <span id="distance">-</span> cm</p>
+      <p>充填率: <span id="percent">-</span> %</p>
+    </section>
+
+    <section>
+      <h2>ログ</h2>
+      <pre id="log"></pre>
+    </section>
+  </main>
+
+  <script type="module" src="relay.js"></script>
+</body>
+</html>
