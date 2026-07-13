@@ -14,7 +14,7 @@ Webブラウザ上の映像のゴミ箱にリアルタイムで反映するプ�
    Firebase Realtime Databaseに書き込む
       ↓ (インターネット経由)
 ④ 公開ページ(index.html, GitHub Pages)がFirebaseの値を購読し、
-   ゴミ箱の絵を充填率に応じて描画する
+   充填率に応じた段階の動画に切り替えて再生する
 ```
 
 Python等は使わず、Arduinoのスケッチ以外はすべてHTML/CSS/JSで完結しています。
@@ -26,6 +26,7 @@ Python等は使わず、Arduinoのスケッチ以外はすべてHTML/CSS/JSで�
 - `firebase-config.js` — Firebaseの接続設定(要編集。下記手順を参照)
 - `relay/` — ゴミ箱の横のPCで開いておく中継ページ(Arduino → Firebase)
 - `index.html` / `style.css` / `app.js` — 誰でも見られる公開ページ(GitHub Pagesで公開)
+- `videos/` — 充填段階ごとに切り替える動画ファイルの置き場所(詳細は`videos/README.md`)
 
 ## セットアップ手順
 
@@ -86,6 +87,12 @@ export const firebaseConfig = {
 2. 「空の時の距離」「満杯の時の距離」を実測してキャリブレーション欄に入力する
 3. 「Arduinoに接続」ボタンを押し、Arduinoが接続されているシリアルポートを選択する
 4. 以降、そのタブを開いたままにしておけば自動的にFirebaseへ値が送信され続ける
+
+### 7. 段階ごとの動画の準備
+
+公開ページは、充填率に応じて`videos/`内の動画(数秒・ループ再生)を切り替えて表示します。
+ファイル名としきい値は`videos/README.md`と`app.js`の`STAGES`を参照してください。
+動画がまだ置かれていない段階は「動画未設定」というプレースホルダーが表示されます。
 
 ## 注意: セキュリティルールについて
 

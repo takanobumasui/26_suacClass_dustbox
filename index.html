@@ -10,9 +10,12 @@
   <main>
     <h1>ダストボックス</h1>
 
-    <div class="bin">
-      <div class="bin-lid"></div>
-      <div class="fill" id="fill"></div>
+    <div class="bin-video-wrap">
+      <video id="binVideo" muted loop playsinline autoplay></video>
+      <div class="bin-placeholder" id="binPlaceholder">
+        動画未設定<br />
+        <span id="placeholderStage"></span>
+      </div>
     </div>
 
     <p class="percent" id="percentLabel">-- %</p>
