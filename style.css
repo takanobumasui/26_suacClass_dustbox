@@ -14,8 +14,8 @@ body {
 
 .bin-video-wrap {
   position: relative;
-  width: min(90vw, 85vh);
-  aspect-ratio: 1 / 1;
+  width: min(92vw, calc(85vh * 16 / 9));
+  aspect-ratio: 16 / 9;
   margin: 0 auto;
   background: #111;
   border-radius: 16px;
