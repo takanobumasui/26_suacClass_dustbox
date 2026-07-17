@@ -4,13 +4,18 @@ body {
   color: #222;
   background: #fafafa;
   margin: 0;
-  padding: 60px 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
 }
 
 .bin-video-wrap {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: min(90vw, 85vh);
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   background: #111;
   border-radius: 16px;
@@ -45,7 +50,7 @@ body {
 
 .percent {
   margin-top: 20px;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
 }
 
