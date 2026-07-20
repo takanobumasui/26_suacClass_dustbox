@@ -48,6 +48,23 @@ body {
   color: #fff;
 }
 
+.sound-toggle {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.sound-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .percent {
   margin-top: 20px;
   font-size: 3em;
