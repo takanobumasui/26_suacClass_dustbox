@@ -21,6 +21,13 @@ const placeholderEl = document.getElementById("binPlaceholder");
 const placeholderStageEl = document.getElementById("placeholderStage");
 const percentLabel = document.getElementById("percentLabel");
 const updatedLabel = document.getElementById("updatedLabel");
+const soundToggle = document.getElementById("soundToggle");
+
+soundToggle.addEventListener("click", () => {
+  videoEl.muted = false;
+  videoEl.play().catch(() => {});
+  soundToggle.style.display = "none";
+});
 
 let currentSrc = null;
 
