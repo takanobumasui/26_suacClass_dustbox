@@ -23,11 +23,19 @@ const percentLabel = document.getElementById("percentLabel");
 const updatedLabel = document.getElementById("updatedLabel");
 const soundToggle = document.getElementById("soundToggle");
 
+function updateSoundToggleLabel() {
+  soundToggle.textContent = videoEl.muted ? "🔇 音声をオンにする" : "🔊 音声をオフにする";
+}
+
 soundToggle.addEventListener("click", () => {
-  videoEl.muted = false;
-  videoEl.play().catch(() => {});
-  soundToggle.style.display = "none";
+  videoEl.muted = !videoEl.muted;
+  if (!videoEl.muted) {
+    videoEl.play().catch(() => {});
+  }
+  updateSoundToggleLabel();
 });
+
+updateSoundToggleLabel();
 
 let currentSrc = null;
 
